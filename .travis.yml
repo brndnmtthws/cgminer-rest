@@ -1,0 +1,23 @@
+language: rust
+rust:
+  - stable
+  - beta
+  - nightly
+matrix:
+  allow_failures:
+    - rust: stable
+    - rust: beta
+  fast_finish: true
+cache: cargo
+before_script:
+  - rustup component add rustfmt
+script:
+  - cargo fmt --all -- --check
+  - cargo build --verbose --all
+  - cargo test --verbose --all
+deploy:
+  provider: cargo
+  on:
+    tags: true
+  token:
+    secure: ggP0XSIFqRO2P+H/lao8KzMOoy21lKRkEZZfIbffMhKiKSlWBoiptffBES8uCJj1zhZciXP7R7dQsqYGIAdeuZZcouvz9B/iFEn6N99nmKN135LeMWo0TUrXWFquY9e0ysE3ypRdm4qOJ0yltxJvEKkIFK8kPDsyjWOHxsIe8AY0BxMEjELNp1mPe9IQmTR4s5Hp+DRUzwbp9DpeFOZuwTV2opCVib8F7zSxVNBgmFk4xyTQ+ygSRHn2Rfy0DjDL3HBNYNCSaYSESprRtsW/ic+xn2vfbmAxe/YaCm8b7neAJQN25g2ZpIJY52qkLtghxU1bzE+DMGRKSuY/boJprNAnjjhmsCR/hSZRa56GESsBnw9m6CNufNZzVm2BiM0PFk+AHf7rWvcED6LUqpdfbWe+bMVIubBgSADidTyBdBQqTBxTaHX7EHNkU9rPcxdv8SEALFUEaRSuAS0bD8AeTWP4DRmF7XRdTJeKTo4dSpX6FMjDSNN+PwmD+m08fior+uMYkxCb3jahby8gspkwvk3UFql3tYWAToTYs3wpbzSeta3pWhOK0xvVAU+vCYZFxUhDBkR1XXiME6Z/A66UHcLwbuO5f4ab784kM4+5aorZQLo4f3zcBm8GT67mlSmBoB6AooFUt/dKP/fxbE1l9elhSCbtLKb+duGvd4tLwt0=

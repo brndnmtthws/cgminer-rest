@@ -1,0 +1,30 @@
+[global]
+# The address cgminer is listening on
+cgminer_addr = "127.0.0.1:4028"
+# Timeout (in seconds) for cgminer socket
+cgminer_timeout = "60"
+
+
+# Default settings for Rocket.
+# For details on Rocket configuration, see:
+#  https://rocket.rs/v0.4/guide/configuration/#configuratio
+[development]
+address = "localhost"
+port = 8000
+keep_alive = 5
+log = "normal"
+limits = { forms = 32768 }
+
+[staging]
+address = "0.0.0.0"
+port = 8000
+keep_alive = 5
+log = "normal"
+limits = { forms = 32768 }
+
+[production]
+address = "0.0.0.0"
+port = 8000
+keep_alive = 5
+log = "critical"
+limits = { forms = 32768 }
