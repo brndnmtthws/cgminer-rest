@@ -13,8 +13,7 @@ fn send_command(
     json: &serde_json::Value,
 ) -> Result<String, std::io::Error> {
     let timeout_duration = Duration::new(timeout as u64, 0);
-    let saddr = addr.to_socket_addrs().unwrap().next().unwrap();
-
+    let saddr = addr.to_socket_addrs()?.next().unwrap();
     let stream = TcpStream::connect_timeout(&saddr, timeout_duration)?;
     stream.set_read_timeout(Some(timeout_duration))?;
     stream.set_write_timeout(Some(timeout_duration))?;
