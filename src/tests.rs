@@ -33,8 +33,8 @@ fn version_fail2() {
         }));
     let client = Client::new(rocket).unwrap();
     let mut response = client.get("/version").dispatch();
-    assert_eq!(
-        response.body_string(),
-        Some("{\"error\":\"IO error: failed to lookup address information: nodename nor servname provided, or not known\"}".into())
-    );
+    assert_eq!(response
+        .body_string()
+        .unwrap_or_else(|| "invalid".to_string())
+        .starts_with("{\"error\":\"IO error: failed to lookup address information: "));
 }
