@@ -82,12 +82,12 @@ fn main() {
             if let Ok(cgminer_addr) = rocket.config().get_string("cgminer_addr") {
                 Ok(rocket.manage(api::CgminerConfig {
                     addr: cgminer_addr,
-                    timeout: timeout,
+                    timeout,
                 }))
             } else {
                 Ok(rocket.manage(api::CgminerConfig {
                     addr: default_addr,
-                    timeout: timeout,
+                    timeout,
                 }))
             }
         }))
