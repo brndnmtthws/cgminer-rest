@@ -8,6 +8,8 @@ extern crate rocket_contrib;
 extern crate serde_derive;
 
 mod api;
+#[cfg(test)]
+mod tests;
 use rocket::fairing::AdHoc;
 
 fn main() {
