@@ -68,3 +68,15 @@ See [Rocket.toml](Rocket.toml) for configuration details.
         => PUT /asc/<id>/disable (ascdisable)
         => GET /asc/<id>/identify (ascidentify)
         => PUT /asc/<id> (ascset)
+
+## Project Goals
+
+The goal of this project is to create a high quality API for working with
+cgminer-based ASICs, in order to enable development of better tooling for
+Bitcoin mining (such as [dragon-rest](https://github.com/brndnmtthws/dragon-rest) and [mother-of-dragons](https://github.com/brndnmtthws/mother-of-dragons)).
+
+If ASIC vendors adopt one canonical API for mining hardware, it will become
+much easier to build tooling that works well with many different types of
+mining hardware. Nearly all ASIC vendors already use cgminer underneath,
+however the cgminer API is esoteric and somewhat difficult to work with
+compared to HTTP.
