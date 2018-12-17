@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/brndnmtthws/cgminer-rest.svg?branch=master)](https://travis-ci.org/brndnmtthws/cgminer-rest)
+[![Build Status](https://travis-ci.org/brndnmtthws/cgminer-rest.svg?branch=master)](https://travis-ci.org/brndnmtthws/cgminer-rest) [![Current Crates.io Version](https://img.shields.io/crates/v/cgminer-rest.svg)](https://crates.io/crates/cgminer-rest)
 
 # cgminer-rest: a RESTful HTTP wrapper for the cgminer API
 
