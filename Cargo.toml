@@ -3,6 +3,8 @@ name = "cgminer-rest"
 version = "0.1.1"
 authors = ["Brenden Matthews <brenden@diddyinc.com>"]
 edition = "2018"
+license = "GPL-3.0-or-later"
+description = "RESTful HTTP API wrapper for cgminer"
 
 [dependencies]
 rocket = "0.4"
