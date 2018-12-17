@@ -21,6 +21,6 @@ serde_json = "1.0"
 serde = "1.0"
 
 [dependencies.rocket_contrib]
-version = "*"
+version = "0.4"
 default-features = false
 features = ["json"]
