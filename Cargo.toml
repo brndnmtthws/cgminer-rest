@@ -5,6 +5,13 @@ authors = ["Brenden Matthews <brenden@diddyinc.com>"]
 edition = "2018"
 license = "GPL-3.0-or-later"
 description = "RESTful HTTP API wrapper for cgminer"
+repository = "https://github.com/brndnmtthws/cgminer-rest"
+readme = "README.md"
+keywords = ["cgminer", "restful", "rest-api"]
+categories = ["api-bindings"]
+
+[badges]
+travis-ci = { repository = "brndnmtthws/cgminer-rest", branch = "master" }
 
 [dependencies]
 rocket = "0.4"
