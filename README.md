@@ -20,7 +20,7 @@ $ cargo install cgminer-rest
 $ cgminer-rest
 ```
 
-See [Rocket.toml](Rocket.toml) for configuration details.
+See [`Rocket.toml`](Rocket.toml) for configuration details. Instructions on using `Rocket.toml` [can be found here](https://rocket.rs/v0.4/guide/configuration/#rockettoml).
 
 ## Example
 
