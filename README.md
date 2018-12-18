@@ -22,6 +22,8 @@ $ cgminer-rest
 
 See [`Rocket.toml`](Rocket.toml) for configuration details. Instructions on using `Rocket.toml` [can be found here](https://rocket.rs/v0.4/guide/configuration/#rockettoml).
 
+*Note: currently you must be running nightly rust. It is recommended that you use [rustup](https://github.com/rust-lang/rustup.rs) to manage your rust installation.*
+
 ## Example
 
 ## API
