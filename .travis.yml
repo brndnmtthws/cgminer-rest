@@ -125,3 +125,6 @@ addons:
   apt:
     packages:
       - libssl-dev
+branches:
+  only:
+    - master
